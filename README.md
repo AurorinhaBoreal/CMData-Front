@@ -2,8 +2,10 @@
 
 ---
 
-**Dado a restrições de tempo, inicialmente esse projeto irá ter seu escopo reduzido! Ele será uma prova de conceito em relação ao real! A informação abaixo se refere a versão completa. Se você quer ver a prova de conceito, vá para essa branch**
-//
+**Dado a restrições de tempo, inicialmente esse projeto irá ter seu escopo reduzido! Ele será uma prova de conceito em relação ao real! A informação abaixo se refere a versão completa. Se você quer ver a prova de conceito, vá para [essa](https://github.com/AurorinhaBoreal/CMData-Front/tree/poc-dev) branch**
+
+---
+
 **Due to time restriction, initially this project will have it scope reduced! this will be a proof of concept of the real one! The info below refers to the complete version. If you wanna see the poc, goes to [this](https://github.com/AurorinhaBoreal/CMData-Front/tree/poc-dev) branch**
 
 ---
