@@ -1,10 +1,10 @@
 # CMData POC
 
-This repository contains the POC (Proof of Concept) of the frontend of the CMData. It is developed using React and TS
+This branch contains the POC (Proof of Concept) of the frontend of the CMData. It is developed using React and TS
 
 # Design
 
-As a poc, the design will be simply and minimalistic
+As a POC, the design will be simply and minimalistic
 
 # User Tasks
 
