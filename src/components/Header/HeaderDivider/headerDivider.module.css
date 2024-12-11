@@ -1,0 +1,8 @@
+.divider {
+    background-color: var(--dark-details);
+    color: var(--dark-details);
+    margin: 0 1vw;
+    width: 0.3vw;
+    height: 2vw;
+    border-radius: 10px;
+}

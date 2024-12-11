@@ -1,0 +1,31 @@
+.headerContainer {
+    padding-top: 0.5vw;
+    background-color: var(--dark-background);
+    color: var(--dark-details);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mainWrapper {
+    margin-left: 1vw;
+    flex-direction: row;
+}
+
+.headerLogo {
+    height: 5vw;
+}
+
+.headerTitle {
+    margin-left: 1vw;
+    margin-top: 1vw;
+    font-size: 2.5vw;
+}
+
+.routerWrapper {
+    font-size: 1.5vw;
+}
+
+.iconsWrapper {
+    margin-right: 1vw;
+    gap: 1vw;
+}
