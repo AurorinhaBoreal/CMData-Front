@@ -1,0 +1,38 @@
+.homeBody {
+    background-color: var(--dark-background);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 85vh;
+}
+
+.slogan {
+    margin-top: 2vw;
+    font-family: "Fira Code", monospace;
+    font-size: 1.5vw;
+    width: 30ch;
+    text-align: center;
+    color: var(--dark-details);
+}
+
+.searchBar{
+    background-color: var(--dark-details) !important;
+    align-self: center;
+    border-radius: 70px !important;
+    width: 50% !important;
+}
+
+.toolsText{
+    font-family: "Fira Code", monospace;
+    font-size: 2vw;
+    text-align: center;
+    color: var(--dark-details);
+    margin-bottom: 2vw;
+}
+
+.toolsWrapper{
+    justify-content: center;
+    height: 5vw;
+    margin-bottom: 8vw;
+    gap: 2vw;
+}
