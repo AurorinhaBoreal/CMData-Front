@@ -30,9 +30,9 @@ const Header = () => {
                 </Link>
                 <HeaderDivider/>
                 {/* IMPROVISED LINK!! CHANGE LATER! */}
-                <Link to={'/suggest-tool'}>
+                <Link to={'/register'}>
                     <Text>
-                        Suggestion Form
+                        Register
                     </Text>
                 </Link>
             </Flex>

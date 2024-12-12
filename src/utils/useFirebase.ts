@@ -1,5 +1,6 @@
 import {initializeApp} from "firebase/app";
 import {getDatabase} from "firebase/database";
+import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
     apiKey: import.meta.env.API_KEY,
@@ -11,8 +12,6 @@ const firebaseConfig = {
     measurementId: import.meta.env.MEASUREMENT_ID
 };
 
-const firebase = initializeApp(firebaseConfig);
-
-const storage = getDatabase(firebase);
-
-export default {firebase, storage}
+const conn = initializeApp(firebaseConfig);
+export const db = getDatabase(conn);
+export const storage = getStorage()
