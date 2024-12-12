@@ -1,0 +1,45 @@
+.suggestToolBody {
+    height: 85vh;
+    background-color: var(--dark-background);
+    color: var(--dark-details);
+}
+
+.titleContainer {
+    padding: 8vh 0vw 2vw 6vw;
+    gap: 0.5vw;
+    font-size: 2.5vw;
+    line-height: 3.2vw;
+}
+
+.toolForm {
+    font-family: "Fira Code", monospace;
+    font-size: 1.2vw;
+    padding: 2vh 0vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vw;
+}
+
+.topRow, .bottomRow {
+    gap: 2vw;
+}
+
+.topRow label, .bottomRow label {
+    margin-bottom: 1vh;
+}
+
+.textAreaPlat {
+    width: 15vw !important;
+    text-align: center;
+}
+
+.inputLogo {
+    width: 15vw !important;
+}
+
+.textAreaDoc {
+    width: 15vw !important;
+    height: 100% !important;
+    text-align: center;
+}

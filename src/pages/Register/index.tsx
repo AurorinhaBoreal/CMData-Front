@@ -1,9 +1,9 @@
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import styles from './register.module.css'
-// import {v4 as uuidv4} from 'uuid'
-// import {storage} from '../../utils/useFirebase'
-// import { getDownloadURL, ref as storageRef, uploadBytes } from "firebase/storage";
+import {v4 as uuidv4} from 'uuid'
+import {storage} from '../../utils/useFirebase'
+import { getDownloadURL, ref as storageRef, uploadBytes } from "firebase/storage";
 import { Box, Button, Flex, FormControl, Input, Text, Image } from '@chakra-ui/react'
 import { IoIosArrowForward } from 'react-icons/io'
 import User from '../../types/User'
@@ -11,7 +11,7 @@ import { useState } from 'react'
 import api from '../../utils/useApi'
 
 const Register = () => {
-    const [imgSrc, setImgSrc] = useState<string | undefined>(undefined);
+    const [imgSrc, setImgSrc] = useState<Blob | undefined>(undefined);
     const [user, setUser] = useState<User>({
         email: "",
         password: "",
@@ -30,12 +30,12 @@ const Register = () => {
         }));
     }
 
-    // const handleAvatarUrl = (url: string) => {
-    //     setUser((prevUserInfo) => ({
-    //         ...prevUserInfo,
-    //         avatarUrl: url
-    //         }));
-    // }
+    const handleAvatarUrl = (url: string) => {
+        setUser((prevUserInfo) => ({
+            ...prevUserInfo,
+            avatarUrl: url
+            }));
+    }
 
     // Quando ocorrer uma mudança no input, ele executa a função
     // Parâmetro event passa o evento de mudança do input
@@ -66,21 +66,21 @@ const Register = () => {
     }
 
     const onSubmit = async () => {
-        // if (!imgSrc) {
-        //     throw new Error("Avatar is null. It cannot be stored properly.");            
-        // }
+        if (!imgSrc) {
+            throw new Error("Avatar is null. It cannot be stored properly.");            
+        }
 
-        // const imageRef = storageRef(storage, `avatars/${uuidv4()}`)
+        const imageRef = storageRef(storage, `avatars/${uuidv4()}`)
 
-        // uploadBytes(imageRef, imgSrc)
-        //     .then((snapshot) => {
-        //         getDownloadURL(snapshot.ref)
-        //             .then((url) => {
-        //                 handleAvatarUrl(url)
-        //             })
-        //     })
+        uploadBytes(imageRef, imgSrc)
+            .then((snapshot) => {
+                getDownloadURL(snapshot.ref)
+                    .then((url) => {
+                        handleAvatarUrl(url)
+                    })
+            })
 
-        const response = await api.post('http://localhost:3333/user/register', user)
+        const response = await api.post('/user/register', user)
 
         console.log(response)
     }
@@ -102,7 +102,7 @@ const Register = () => {
                                 Avatar
                             </label>
                             <Input onChange={handleImagePreview} className={styles.inputLogo} type='file' placeholder="Your Avatar" border='none' id='logoInput'/>
-                            {imgSrc && <Image src={imgSrc} id='imagePreview' w='8vw' margin='auto'/>}
+                            {/* {imgSrc && <Image src={imgSrc as string} id='imagePreview' w='8vw' margin='auto'/>} */}
                         </Box>
                         <Box display="flex" flexDirection="column" gap="30%">
                             <Flex gap="10%">
